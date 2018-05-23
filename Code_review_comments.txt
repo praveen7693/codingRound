@@ -1,0 +1,8 @@
+-> Updated framework structure
+   -- Added BaseTest to initialise driver and property files
+   -- Added Config.property file (has url, driver to use, driver location, etc...)
+   -- Added Driver class to create driver
+   -- Created Interface and Impl pages for features
+   -- Created CommonUtil class (has common operations) 
+   -- Added log4j for logger
+-> Fixed FlightBooking tests
