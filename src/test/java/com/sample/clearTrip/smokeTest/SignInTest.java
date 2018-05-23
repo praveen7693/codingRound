@@ -1,13 +1,14 @@
-package smokeTest;
+package com.sample.clearTrip.smokeTest;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import com.sample.clearTrip.BaseTest;
 import com.sun.javafx.PlatformUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
-public class SignInTest {
+public class SignInTest extends BaseTest {
 
     WebDriver driver = new ChromeDriver();
 
@@ -25,7 +26,7 @@ public class SignInTest {
         driver.findElement(By.id("signInButton")).click();
 
         String errors1 = driver.findElement(By.id("errors1")).getText();
-        Assert.assertTrue(errors1.contains("There were errors in your submission"));
+        AssertJUnit.assertTrue(errors1.contains("There were errors in your submission"));
         driver.quit();
     }
 

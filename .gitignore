@@ -1,5 +1,9 @@
 build
 .idea
 .gradle
+.settings
 codingRound.iml
 /target
+/test-output
+.classpath
+.project
