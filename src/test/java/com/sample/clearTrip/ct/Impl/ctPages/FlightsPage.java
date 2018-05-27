@@ -37,7 +37,7 @@ public class FlightsPage {
     @FindBy (id = "SearchBtn")
     private WebElement btnSearch;
 
-    @FindBy (xpath = "(//*[@id='Home']//li[@class='flightApp']/a)[1]")
+    @FindBy (xpath = "//*[@id='Home']//li[@class='flightApp']/a[1]")
     private WebElement tabFlights;
     
     @FindBy (id = "DepartDate")

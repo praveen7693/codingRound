@@ -123,5 +123,16 @@ public class CommonUtil {
         }
         return true;
     }
-
+    
+    public static boolean visibilityOfElementLocated(WebElement element, int waitTimeInSeconds){
+		try{
+			implicitWait(0);
+			WebDriverWait wb=new WebDriverWait(Driver.driver, waitTimeInSeconds);
+			wb.until(ExpectedConditions.visibilityOf(element));
+		}catch(Exception e){
+			return false;
+		}
+		return true;
+	}
+    
 }
