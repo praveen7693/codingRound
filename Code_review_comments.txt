@@ -11,3 +11,4 @@
 
 //TODO
 -> Read test data from excel/csv
+-> Take screenshot on test failure
