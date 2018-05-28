@@ -48,11 +48,16 @@ public class HotelsPage {
     
     @FindBy (className = "searchSummary")
     private WebElement searchSummary;
+    
+    @FindBy (xpath = "//span[contains(@title,'Cleartrip')]")
+    private WebElement home;
 
     //Methods
     
     public boolean searchHotels (String location, String checkInDate, String checkOutDate, String travellers) {
     	try {
+    		CommonUtil.visibilityOfElementLocated(home);
+    		home.click();
     		CommonUtil.visibilityOfElementLocated(tabHotels);
     		tabHotels.click();
     		logger.info("Clicked on hotels tab successfully");
@@ -80,7 +85,7 @@ public class HotelsPage {
             CommonUtil.waitFor(500);
             BtnSearch.click();
             logger.info("Clicked on search button successfully");
-            CommonUtil.waitFor(1000);
+            CommonUtil.waitFor(2500);
             Assert.assertTrue(CommonUtil.visibilityOfElementLocated(searchSummary), "Unable to verify Search summary");
             logger.info("Verified Search Summary successfully");
     	}

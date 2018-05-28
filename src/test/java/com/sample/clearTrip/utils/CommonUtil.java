@@ -135,4 +135,24 @@ public class CommonUtil {
 		return true;
 	}
     
+    public static boolean switchToFrame(WebElement frameElement) {
+		try {
+				Driver.driver.switchTo().frame(frameElement);
+		} catch (Exception e) {
+			e.getStackTrace();
+			return false;
+		}
+		return true;
+	}
+    
+    public static boolean switchtoDefaultFrame() {
+		try {
+			Driver.driver.switchTo().defaultContent();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return false;
+		}
+		return true;
+	}
+    
 }

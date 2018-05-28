@@ -2,6 +2,7 @@ package com.sample.clearTrip.ct.Impl;
 
 import com.sample.clearTrip.ct.Impl.ctPages.FlightsPage;
 import com.sample.clearTrip.ct.Impl.ctPages.HotelsPage;
+import com.sample.clearTrip.ct.Impl.ctPages.LoginPage;
 import com.sample.clearTrip.ct.Navigator;
 
 import java.util.Map;
@@ -17,6 +18,11 @@ public class NavigatorImpl implements Navigator {
 	public boolean searchHotels(String location, String checkInDate, String checkOutDate,
 			String travellers) {
 		return HotelsPage.getInstance().searchHotels(location, checkInDate, checkOutDate, travellers);
+	}
+
+	@Override
+	public boolean attemptToLoginWithInvalidDetails(String userName, String password) {
+		return LoginPage.getInstance().attemptToLoginWithInvalidDetails(userName, password);
 	}
 
 }

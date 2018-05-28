@@ -8,4 +8,6 @@ public interface Navigator {
 
     public boolean searchHotels (String location, String checkInDate, String checkOutDate, String travellers);
     
+    public boolean attemptToLoginWithInvalidDetails (String userName, String password);
+    
 }

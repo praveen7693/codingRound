@@ -1,5 +1,6 @@
 package com.sample.clearTrip.smokeTest;
 
+import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import com.sample.clearTrip.BaseTest;
 
@@ -7,6 +8,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FlightBookingTest extends BaseTest {
+	
+	public FlightBookingTest() {
+		logger = Logger.getLogger(this.getClass());
+	}
 
     @Test (priority = 1)
     public void testThatResultsAppearForAOneWayJourney() {

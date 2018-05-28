@@ -11,7 +11,7 @@ public class HotelBookingTest extends BaseTest {
 		logger = Logger.getLogger(this.getClass());
 	}
 
-    @Test
+    @Test (priority = 1)
     public void shouldBeAbleToSearchForHotels() {
     	
     	logger.info("shouldBeAbleToSearchForHotels test started!");

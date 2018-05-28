@@ -6,3 +6,8 @@
    -- Created CommonUtil class (has common operations) 
    -- Added log4j for logger
 -> Fixed FlightBooking tests
+-> Fixed HotelBooking tests
+-> Fixed SignIn tests
+
+//TODO
+-> Read test data from excel/csv

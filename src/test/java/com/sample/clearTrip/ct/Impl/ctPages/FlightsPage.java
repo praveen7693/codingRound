@@ -45,11 +45,17 @@ public class FlightsPage {
 
     @FindBy (className = "searchSummary")
     private WebElement searchSummary;
+    
+    @FindBy (xpath = "//span[contains(@title,'Cleartrip')]")
+    private WebElement home;
 
     //Methods
 
     public boolean searchOneWayFlight (String startingPoint, String destination, String date, Map<String, Integer> passengerList) {
         try {
+        	CommonUtil.visibilityOfElementLocated(home);
+        	home.click();
+        	CommonUtil.visibilityOfElementLocated(tabFlights);
             tabFlights.click();
             logger.info("Flights tab selected successfully");
             
